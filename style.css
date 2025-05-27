@@ -1,74 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
-
-/* Variáveis */
-:root {
-    --primary-color: #026773;
-    --secondary-color: #3CA6A6;
-    --text-color: #024959;
-    --background-color: #F2E3D5;
-    --button-hover: #012E40;
-    --font-body: "Chocolate Classical Sans", serif;
-    --font-titulo: "Rakkas", serif;
-}
-
-/* código omitido */
-
-/* código omitido */
-/* código omitido */
-
-/* Reset */
+/* Definindo o estilo geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-body);
+    font-family: Arial, sans-serif;
 }
 
-/* Corpo da página */
+/* Estilo para o body */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
 }
 
-h3 {
-    margin-top: 25px;
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-p {
+header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+header img {
+    width: 60%; /* Tornando a imagem menor */
+    max-width: 600px;
+    height: auto;
+    margin: 20px 0;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Navegação */
+nav {
     margin-top: 20px;
 }
 
-img {
-    max-width: 90%;
+nav ul {
+    list-style: none;
 }
 
-/* código omitido */
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-body);
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-/* Corpo da página */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
+nav ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seções */
+.conteudo {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
 h3 {
-    margin-top: 25px;
-}
-
-p {
+    font-size: 1.6rem;
+    color: #34495e;
     margin-top: 20px;
 }
 
-img {
-    max-width: 90%;
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-/* código omitido */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Botão de call to action */
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+.cta-button i {
+    margin-left: 10px;
+}
+
+/* Seção de Conclusão */
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+}
+
+footer a.cta-footer {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header img {
+        width: 80%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .conteudo {
+        padding: 0 10px;
+    }
+}
