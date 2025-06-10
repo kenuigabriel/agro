@@ -1,173 +1,158 @@
-/* Definindo o estilo geral */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
+:root {
+    --branco: white;
+    --cor-de-fundo: #00162E;
+    --fundo-senha: #00244D;
+    --fundo-texto: #001E40;
+    --borda: #0075FF;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-weight: 400;
 }
 
-/* Estilo para o body */
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-    padding: 20px;
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
 }
 
-/* Cabeçalho */
-header {
+.titulo-principal {
+    font-family: var(--roboto-mono);
+    font-size: 32px;
+}
+
+.titulo-secundario {
+    font-size: 24px;
+}
+
+.conteudo-titulo {
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 80px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
+.conteudo-senha {
+    margin-top: 80px;
+    background: var(--fundo-senha);
+    padding: 24px;
+    border-bottom: 6px solid var(--borda);
 }
 
-header img {
-    width: 60%; /* Tornando a imagem menor */
-    max-width: 600px;
-    height: auto;
-    margin: 20px 0;
+#campo-senha {
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 70%;
 }
 
-header p {
-    font-size: 1.1rem;
-    color: #7f8c8d;
+#campo-senha:focus {
+    outline: none;
 }
 
-/* Navegação */
-nav {
-    margin-top: 20px;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #3498db;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #1abc9c;
-}
-
-/* Estilo para o conteúdo principal */
-main {
+.conteudo {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Seções */
-.conteudo {
-    margin-bottom: 40px;
+.parametro {
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px;
+    padding: 24px;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 28px;
 }
 
-h3 {
-    font-size: 1.6rem;
-    color: #34495e;
-    margin-top: 20px;
+.parametro-senha__titulo {
+    font-size: 24px;
 }
 
-p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
+.parametro-coluna__senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-ul {
-    list-style: none;
-    margin-top: 10px;
+.parametro-senha {
+    width: 50%;
+    margin: 0 auto;
 }
 
-ul li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+.parametro-senha-botoes {
+    display: flex;
+    justify-content: center;
 }
 
-/* Botão de call to action */
-.cta-button {
-    display: inline-block;
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+.parametro-senha__botao {
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.cta-button:hover {
-    background-color: #2980b9;
+.parametro-senha__texto {
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0;
+    font-size: 24px;
 }
 
-.cta-button i {
-    margin-left: 10px;
+label {
+    font-size: 20px;
 }
 
-/* Seção de Conclusão */
-iframe {
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.barra {
+    background-color: var(--fundo-senha);
+    height: 30px;
     width: 100%;
-    max-width: 560px;
-    height: 315px;
-    margin-top: 20px;
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #34495e;
-    color: white;
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
 }
 
-footer a.cta-footer {
-    color: #1abc9c;
-    text-decoration: none;
-    font-weight: bold;
+.fraca {
+    width: 25%;
+    background-color: #E71B32;
 }
 
-footer p {
-    margin-top: 10px;
-    font-size: 0.9rem;
+.media {
+    background-color: #FAF408;
+    width: 50%;
 }
 
-/* Responsividade */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+.forte {
+    background-color: #00FF85;
+    width: 100%;
+}
 
-    header img {
-        width: 80%;
-    }
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
-    }
 
-    .conteudo {
-        padding: 0 10px;
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
     }
 }
